@@ -2,11 +2,11 @@ import { Component, signal } from '@angular/core';
 //import { RouterOutlet } from '@angular/router';
 import { MyCounterComponent } from './my-counter/my-counter.component';
 import { BookComponent } from './book-component/book-component';
-
+import { LoginPageComponent } from './login-page-component/login-page-component';
 
 @Component({
   selector: 'app-root',
-  imports: [MyCounterComponent, BookComponent],
+  imports: [MyCounterComponent, BookComponent, LoginPageComponent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

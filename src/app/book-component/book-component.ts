@@ -16,12 +16,6 @@ export class BookComponent {
   bookId = input.required<number>();
 
   newBookId: number = 1;
-
-  // constructor(private store: Store<{ count: number }>) {
-  //   //this.count$ = store.select('count');
-  //   this.count$ = store.select(state => state.count);
-  // }
-
   constructor(private store: Store<{ id: number }>) {
     store.dispatch(() => loadBook({ id: this.bookId() }));
     this.id$ = store.select(state => state.id);

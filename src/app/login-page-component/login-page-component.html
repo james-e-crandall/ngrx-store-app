@@ -1,0 +1,8 @@
+<p>login-page-component works!</p>
+
+<label>Username:</label>
+<input type="text" placeholder="Username" [(ngModel)]="login.username" />
+<label>Password:</label>
+<input type="password" placeholder="Password" [(ngModel)]="login.password" />
+
+<button (click)="onSubmit(login.username, login.password)">Login</button>
