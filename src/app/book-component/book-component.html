@@ -1,0 +1,9 @@
+<p>book-component works!</p>
+
+<div>Current id: {{ id$ | async }}</div>
+
+<div>new  id: {{ newBookId }}</div>
+
+<input type="number" [(ngModel)]="newBookId" />
+
+<button (click)="updateBookId()">Load Book</button>
