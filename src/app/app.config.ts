@@ -10,18 +10,21 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { bookReducer} from './state/book.reducer';
 
 import { loginPageReducer } from './state/login-page.reducer';
+import { reduce } from 'rxjs';
+import { debugMetaReducers } from './state/debug-metareducer';
+import { clearStateMetaReducers  } from './state/clear-state.metareducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-        provideStore({
-          count: counterReducer, // Register your reducers here
-          // Add more state slices and their corresponding reducers as needed
-          id : bookReducer,
-          login : loginPageReducer
-        }),
+    provideStore({
+      count: counterReducer, // Register your reducers here
+      // Add more state slices and their corresponding reducers as needed
+      id : bookReducer,
+      login : loginPageReducer,
+    }, {metaReducers : [...debugMetaReducers, ...clearStateMetaReducers]}),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() })
 ]
 };
