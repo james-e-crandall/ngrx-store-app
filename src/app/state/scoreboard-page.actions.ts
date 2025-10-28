@@ -1,5 +1,5 @@
 import { createAction, props } from '@ngrx/store';
-import { Game } from '../Game'
+import { Game } from '../games/Game'
 
 export const homeScore = createAction('[Scoreboard Page] Home Score');
 export const awayScore = createAction('[Scoreboard Page] Away Score');

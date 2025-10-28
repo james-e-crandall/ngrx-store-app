@@ -1,5 +1,5 @@
 import { createFeature, createReducer, on } from '@ngrx/store';
-import { Book } from '../book-list/book-model';
+import { Book } from '../books/book';
 
 import * as BookListPageActions from './book-list-page.actions';
 import * as BooksApiActions from './books-api.actions';

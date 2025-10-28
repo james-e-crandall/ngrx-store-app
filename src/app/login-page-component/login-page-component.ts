@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { loginUser } from '../state/login-page.actions';
-import { Login } from '../Login';
+import { Login } from '../Logins/Login';
 
 import { FormsModule } from '@angular/forms';
 

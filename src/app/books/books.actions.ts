@@ -1,5 +1,5 @@
 import { createAction, createActionGroup, props } from '@ngrx/store';
-import { Book } from '../book-list/book-model.js';
+import { Book } from '../books/book.js';
 
 export const BooksActions = createActionGroup({
   source: 'Books',
@@ -16,5 +16,5 @@ export const BooksApiActions = createActionGroup({
   },
 });
 
-export const loadBook = createAction('[book Component] load', props<{ id: number }>());
+export const loadBook = createAction('[book Component] load', props<{ id: number, message:string }>());
 

@@ -1,0 +1,9 @@
+<p>movies-page works!</p>
+<ul>
+  @for (movie of movies$ | async; track movie.id) {
+  <li>{{ movie.name }}</li>
+  } @empty {
+  <li>There are no items.</li>
+  }
+</ul>
+

@@ -1,5 +1,5 @@
 import { ActionReducer, MetaReducer } from "@ngrx/store";
-import * as LoginActionTypes from '../models/log-action-types';
+import * as LoginActionTypes from '../LogActions/log-action-types';
 
 export function clearState(reducer: ActionReducer<any>): ActionReducer<any> {
  return function (state, action) {
